@@ -132,8 +132,8 @@ window.addEventListener("scroll", () => {
 
 // ==================== TYPEWRITER EFFECT ====================
 const texts = [
-  "Full-Stack Fejlesztő",
   "Webfejlesztő",
+  "Full-Stack Fejlesztő",
   "Frontend Kódoló",
   "Backend Kódoló",
 ];
