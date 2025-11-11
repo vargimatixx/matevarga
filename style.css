@@ -787,6 +787,7 @@ section {
   position: relative;
   z-index: 1;
   transition: var(--transition);
+  pointer-events: none;
 }
 
 .project-card:hover .project-image {
