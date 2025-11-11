@@ -17,7 +17,7 @@
     <meta property="og:url" content="https://vargimatixx.github.io/matevarga/" />
     <meta property="og:title" content="Varga Máté | Full-Stack Webfejlesztő Portfolio" />
     <meta property="og:description" content="Full-Stack webfejlesztő portfolio. PHP, JavaScript, React, Node.js. Erasmus tapasztalat és egyedi webes projektek." />
-    <meta property="og:image" content="https://vargimatixx.github.io/matevarga/preview.jpg" />
+    <meta property="og:image" content="https://vargimatixx.github.io/matevarga/preview.png" />
     <meta property="og:locale" content="hu_HU" />
     
     <!-- Favicon -->
@@ -45,11 +45,15 @@
         <span class="logo-bracket">/&gt;</span>
       </div>
       <div class="nav-links">
-        <a href="#home" class="nav-link active">Home</a>
-        <a href="#about" class="nav-link">Rólam</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#projects" class="nav-link">Projektek</a>
-        <a href="#contact" class="nav-link">Kapcsolat</a>
+        <a href="#home" class="nav-link active" data-i18n="nav.home">Home</a>
+        <a href="#about" class="nav-link" data-i18n="nav.about">Rólam</a>
+        <a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a>
+        <a href="#projects" class="nav-link" data-i18n="nav.projects">Projektek</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Kapcsolat</a>
+      </div>
+      <div class="language-switcher">
+        <button class="lang-btn active" data-lang="hu">HU</button>
+        <button class="lang-btn" data-lang="en">EN</button>
       </div>
       <div class="hamburger">
         <span></span>
@@ -69,16 +73,16 @@
             <span id="typed-text"></span><span class="cursor">|</span>
           </h2>
         </div>
-        <p class="hero-description">
+        <p class="hero-description" data-i18n="hero.description">
           Full-Stack Fejlesztő | Webfejlesztés | Weblap Készítés
         </p>
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary">
-            <span>Projektek</span>
+            <span data-i18n="hero.projects">Projektek</span>
             <i class="fas fa-arrow-right"></i>
           </a>
           <a href="#contact" class="btn btn-secondary">
-            <span>Kapcsolat</span>
+            <span data-i18n="hero.contact">Kapcsolat</span>
             <i class="fas fa-paper-plane"></i>
           </a>
         </div>
@@ -108,28 +112,28 @@
       <div class="container">
         <h2 class="section-title">
           <span class="title-number">01.</span>
-          Rólam
+          <span data-i18n="about.title">Rólam</span>
           <div class="title-line"></div>
         </h2>
         <div class="about-content">
           <div class="about-text">
-            <p>
+            <p data-i18n="about.intro">
               Szia! <span class="highlight">Varga Máté</span> vagyok, 
               webfejlesztő, aki szereti a modern technológiákat és a 
               kreativitást összekapcsolni.
             </p>
-            <p>
+            <p data-i18n="about.erasmus">
               Részt vettem az <span class="highlight">Erasmus programban</span>, 
               ahol nemzetközi környezetben dolgoztam egy olasz cégnek. 
               Ez a tapasztalat rengeteg szakmai és személyes fejlődést hozott, 
               új perspektívát adott a programozáshoz.
             </p>
-            <p>
+            <p data-i18n="about.projects">
               Különböző <span class="highlight">projekteken</span> dolgoztam, 
               weboldalakon, időpontfoglaló rendszereken és egyedi alkalmazásokon. 
               Szeretem a kihívásokat és folyamatosan tanulok új dolgokat.
             </p>
-            <p>
+            <p data-i18n="about.contact">
               Ha van egy érdekes projekt ötleted, vagy együtt szeretnél dolgozni, 
               <span class="highlight">keress bátran</span>! Mindig nyitott vagyok 
               új lehetőségekre és kihívásokra.
@@ -156,7 +160,7 @@
       <div class="container">
         <h2 class="section-title">
           <span class="title-number">02.</span>
-          Technológiák
+          <span data-i18n="skills.title">Technológiák</span>
           <div class="title-line"></div>
         </h2>
         <div class="skills-grid">
@@ -236,7 +240,7 @@
       <div class="container">
         <h2 class="section-title">
           <span class="title-number">03.</span>
-          Projektek
+          <span data-i18n="projects.title">Projektek</span>
           <div class="title-line"></div>
         </h2>
         <div class="projects-grid">
@@ -255,7 +259,7 @@
             </div>
             <div class="project-info">
               <h3>VVszerviz</h3>
-              <p>
+              <p data-i18n="projects.vvszerviz">
                 Klíma, robotfűnyíró és hőszivattyú telepítő cég bemutatkozó 
                 weboldala. Modern dizájn, szolgáltatás katalógus és kapcsolati rendszer.
               </p>
@@ -283,8 +287,8 @@
               </div>
             </div>
             <div class="project-info">
-              <h3>HSZC Időpontfoglaló</h3>
-              <p>
+              <h3 data-i18n="projects.hszc.title">HSZC Időpontfoglaló</h3>
+              <p data-i18n="projects.hszc.description">
                 Komplex időpontfoglaló rendszer iskolai célokra, felhasználói
                 hitelesítéssel, adminisztrációs felülettel és időpont
                 kezeléssel.
@@ -302,6 +306,34 @@
             <div class="project-image">
               <div class="project-overlay">
                 <div class="project-links">
+                  <a
+                    href="https://agostonszilvia.hu"
+                    target="_blank"
+                    class="project-link"
+                    ><i class="fas fa-external-link-alt"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Ágoston Szilvia Kozmetika</h3>
+              <p data-i18n="projects.agostonszilvia">
+                Kozmetikus szakember bemutatkozó weboldala. Szolgáltatások 
+                bemutatása és elérhetőségek.
+              </p>
+              <div class="project-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>PHP</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-overlay">
+                <div class="project-links">
                   <a href="#" class="project-link"
                     ><i class="fas fa-hospital"></i
                   ></a>
@@ -309,8 +341,8 @@
               </div>
             </div>
             <div class="project-info">
-              <h3>AT Medical - Sorszámhúzó Rendszer</h3>
-              <p>
+              <h3 data-i18n="projects.atmedical.title">AT Medical - Sorszámhúzó Rendszer</h3>
+              <p data-i18n="projects.atmedical.description">
                 Erasmus program keretében olasz cégnek fejlesztett kórházi 
                 sorszámhúzó program. Várólista kezelés.
               </p>
@@ -333,13 +365,13 @@
       <div class="container">
         <h2 class="section-title">
           <span class="title-number">04.</span>
-          Kapcsolat
+          <span data-i18n="contact.title">Kapcsolat</span>
           <div class="title-line"></div>
         </h2>
         <div class="contact-content">
           <div class="contact-info">
-            <h3>Keress bátran!</h3>
-            <p>
+            <h3 data-i18n="contact.cta">Keress bátran!</h3>
+            <p data-i18n="contact.message">
               Van egy érdekes projekt ötleted, vagy szeretnél együttműködni? Írj
               bátran, mindig nyitott vagyok új lehetőségekre!
             </p>
@@ -347,21 +379,21 @@
               <div class="contact-item">
                 <i class="fas fa-envelope"></i>
                 <div>
-                  <h4>Email</h4>
+                  <h4 data-i18n="contact.email">Email</h4>
                   <a href="mailto:vargimatix@gmail.com">vargimatix@gmail.com</a>
                 </div>
               </div>
               <div class="contact-item">
                 <i class="fas fa-map-marker-alt"></i>
                 <div>
-                  <h4>Lokáció</h4>
-                  <p>Szentes, Magyarország</p>
+                  <h4 data-i18n="contact.location">Lokáció</h4>
+                  <p data-i18n="contact.locationValue">Szentes, Magyarország</p>
                 </div>
               </div>
               <div class="contact-item">
                 <i class="fas fa-phone"></i>
                 <div>
-                  <h4>Telefon</h4>
+                  <h4 data-i18n="contact.phone">Telefon</h4>
                   <a href="tel:+36202117393">+36 20 211 7393</a>
                 </div>
               </div>
@@ -374,19 +406,19 @@
             <input type="hidden" name="redirect" value="https://web3forms.com/success">
             
             <div class="form-group">
-              <input type="text" name="name" placeholder="Neved" required />
+              <input type="text" name="name" data-i18n-placeholder="contact.form.name" placeholder="Neved" required />
             </div>
             <div class="form-group">
-              <input type="email" name="email" placeholder="Email címed" required />
+              <input type="email" name="email" data-i18n-placeholder="contact.form.email" placeholder="Email címed" required />
             </div>
             <div class="form-group">
-              <input type="text" name="custom_subject" placeholder="Tárgy" required />
+              <input type="text" name="custom_subject" data-i18n-placeholder="contact.form.subject" placeholder="Tárgy" required />
             </div>
             <div class="form-group">
-              <textarea name="message" placeholder="Üzeneted" rows="5" required></textarea>
+              <textarea name="message" data-i18n-placeholder="contact.form.message" placeholder="Üzeneted" rows="5" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">
-              <span>Üzenet küldése</span>
+              <span data-i18n="contact.form.submit">Üzenet küldése</span>
               <i class="fas fa-paper-plane"></i>
             </button>
             <div id="formMessage" style="margin-top: 1rem; display: none;"></div>
@@ -404,7 +436,7 @@
             <span class="logo-text">VM</span>
             <span class="logo-bracket">/&gt;</span>
           </div>
-          <p>&copy; 2025 Varga Máté. Minden jog fenntartva.</p>
+          <p>&copy; 2025 Varga Máté. <span data-i18n="footer.rights">Minden jog fenntartva.</span></p>
           <div class="footer-social">
             <a href="https://github.com/vargimatixx" target="_blank"
               ><i class="fab fa-github"></i

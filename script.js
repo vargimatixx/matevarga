@@ -131,12 +131,229 @@ window.addEventListener("scroll", () => {
 });
 
 // ==================== TYPEWRITER EFFECT ====================
-const texts = [
-  "Webfejlesztő",
-  "Full-Stack Fejlesztő",
-  "Frontend Kódoló",
-  "Backend Kódoló",
-];
+// Translations
+const translations = {
+  hu: {
+    typewriter: [
+      "Webfejlesztő",
+      "Full-Stack Fejlesztő",
+      "Frontend Kódoló",
+      "Backend Kódoló",
+    ],
+    nav: {
+      home: "Home",
+      about: "Rólam",
+      skills: "Képességeim",
+      projects: "Projektek",
+      contact: "Kapcsolat",
+    },
+    hero: {
+      description: "Full-Stack Fejlesztő | Webfejlesztés | Weblap Készítés",
+      projects: "Projektek",
+      contact: "Kapcsolat",
+    },
+    about: {
+      title: "Rólam",
+      intro:
+        'Szia! <span class="highlight">Varga Máté</span> vagyok, webfejlesztő, aki szereti a modern technológiákat és a kreativitást összekapcsolni.',
+      erasmus:
+        'Részt vettem az <span class="highlight">Erasmus programban</span>, ahol nemzetközi környezetben dolgoztam egy olasz cégnek. Ez a tapasztalat rengeteg szakmai és személyes fejlődést hozott, új perspektívát adott a programozáshoz.',
+      projects:
+        'Különböző <span class="highlight">projekteken</span> dolgoztam, weboldalakon, időpontfoglaló rendszereken és egyedi alkalmazásokon. Szeretem a kihívásokat és folyamatosan tanulok új dolgokat.',
+      contact:
+        'Ha van egy érdekes projekt ötleted, vagy együtt szeretnél dolgozni, <span class="highlight">keress bátran</span>! Mindig nyitott vagyok új lehetőségekre és kihívásokra.',
+    },
+    skills: {
+      title: "Technológiák",
+    },
+    projects: {
+      title: "Projektek",
+      vvszerviz:
+        "Klíma, robotfűnyíró és hőszivattyú telepítő cég bemutatkozó weboldala. Modern dizájn, szolgáltatás katalógus és kapcsolati rendszer.",
+      hszc: {
+        title: "HSZC Időpontfoglaló",
+        description:
+          "Komplex időpontfoglaló rendszer iskolai célokra, felhasználói hitelesítéssel, adminisztrációs felülettel és időpont kezeléssel.",
+      },
+      agostonszilvia:
+        "Kozmetikus szakember bemutatkozó weboldala. Szolgáltatások bemutatása és elérhetőségek.",
+      atmedical: {
+        title: "AT Medical - Sorszámhúzó Rendszer",
+        description:
+          "Erasmus program keretében olasz cégnek fejlesztett kórházi sorszámhúzó program. Várólista kezelés.",
+      },
+    },
+    contact: {
+      title: "Kapcsolat",
+      cta: "Keress bátran!",
+      message:
+        "Van egy érdekes projekt ötleted, vagy szeretnél együttműködni? Írj bátran, mindig nyitott vagyok új lehetőségekre!",
+      email: "Email",
+      location: "Lokáció",
+      locationValue: "Szentes, Magyarország",
+      phone: "Telefon",
+      form: {
+        name: "Neved",
+        email: "Email címed",
+        subject: "Tárgy",
+        message: "Üzeneted",
+        submit: "Üzenet küldése",
+        sending: "Küldés...",
+        success: "Köszönöm az üzeneted! Hamarosan válaszolok. 🚀",
+        error:
+          "Hiba történt. Kérlek próbáld újra vagy írj közvetlenül a vargimatix@gmail.com címre!",
+      },
+    },
+    footer: {
+      rights: "Minden jog fenntartva.",
+    },
+  },
+  en: {
+    typewriter: [
+      "Web Developer",
+      "Full-Stack Developer",
+      "Frontend Coder",
+      "Backend Coder",
+    ],
+    nav: {
+      home: "Home",
+      about: "About",
+      skills: "Skills",
+      projects: "Projects",
+      contact: "Contact",
+    },
+    hero: {
+      description: "Full-Stack Developer | Web Development | Web Design",
+      projects: "Projects",
+      contact: "Contact",
+    },
+    about: {
+      title: "About Me",
+      intro:
+        'Hi! I\'m <span class="highlight">Máté Varga</span>, a web developer who loves to combine modern technologies with creativity.',
+      erasmus:
+        'I participated in the <span class="highlight">Erasmus program</span>, where I worked for an Italian company in an international environment. This experience brought a lot of professional and personal growth, giving me a new perspective on programming.',
+      projects:
+        'I have worked on various <span class="highlight">projects</span>, including websites, appointment booking systems, and custom applications. I love challenges and am constantly learning new things.',
+      contact:
+        'If you have an interesting project idea or would like to work together, <span class="highlight">feel free to reach out</span>! I am always open to new opportunities and challenges.',
+    },
+    skills: {
+      title: "Technologies",
+    },
+    projects: {
+      title: "Projects",
+      vvszerviz:
+        "Website for an air conditioning, robotic lawn mower, and heat pump installation company. Modern design, service catalog, and contact system.",
+      hszc: {
+        title: "HSZC Appointment Booking",
+        description:
+          "Complex appointment booking system for school purposes, with user authentication, administration interface, and appointment management.",
+      },
+      agostonszilvia:
+        "Professional cosmetician website. Services presentation and contact information.",
+      atmedical: {
+        title: "AT Medical - Queue System",
+        description:
+          "Hospital queue management program developed for an Italian company as part of the Erasmus program. Waiting list management.",
+      },
+    },
+    contact: {
+      title: "Contact",
+      cta: "Get In Touch!",
+      message:
+        "Have an interesting project idea or want to collaborate? Feel free to reach out, I'm always open to new opportunities!",
+      email: "Email",
+      location: "Location",
+      locationValue: "Szentes, Hungary",
+      phone: "Phone",
+      form: {
+        name: "Your Name",
+        email: "Your Email",
+        subject: "Subject",
+        message: "Your Message",
+        submit: "Send Message",
+        sending: "Sending...",
+        success: "Thank you for your message! I'll get back to you soon. 🚀",
+        error:
+          "An error occurred. Please try again or email me directly at vargimatix@gmail.com!",
+      },
+    },
+    footer: {
+      rights: "All rights reserved.",
+    },
+  },
+};
+
+let currentLang = "hu";
+
+// Language switching function
+function switchLanguage(lang) {
+  currentLang = lang;
+
+  // Update all elements with data-i18n attribute
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.getAttribute("data-i18n");
+    const keys = key.split(".");
+    let value = translations[lang];
+
+    keys.forEach((k) => {
+      value = value[k];
+    });
+
+    if (value) {
+      element.innerHTML = value;
+    }
+  });
+
+  // Update placeholders
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+    const key = element.getAttribute("data-i18n-placeholder");
+    const keys = key.split(".");
+    let value = translations[lang];
+
+    keys.forEach((k) => {
+      value = value[k];
+    });
+
+    if (value) {
+      element.placeholder = value;
+    }
+  });
+
+  // Update active language button
+  document.querySelectorAll(".lang-btn").forEach((btn) => {
+    btn.classList.remove("active");
+    if (btn.getAttribute("data-lang") === lang) {
+      btn.classList.add("active");
+    }
+  });
+
+  // Update typewriter texts
+  texts = translations[lang].typewriter;
+  textIndex = 0;
+  charIndex = 0;
+  isDeleting = false;
+
+  // Save language preference
+  localStorage.setItem("preferredLanguage", lang);
+}
+
+// Initialize language from localStorage or default to Hungarian
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("preferredLanguage") || "hu";
+  switchLanguage(savedLang);
+});
+
+// Language button event listeners
+document.querySelectorAll(".lang-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const lang = btn.getAttribute("data-lang");
+    switchLanguage(lang);
+  });
+});
+
+let texts = translations[currentLang].typewriter;
 
 let textIndex = 0;
 let charIndex = 0;
@@ -225,7 +442,8 @@ contactForm.addEventListener("submit", async (e) => {
   // Disable submit button during sending
   const submitButton = contactForm.querySelector('button[type="submit"]');
   const originalButtonText = submitButton.querySelector("span").textContent;
-  submitButton.querySelector("span").textContent = "Küldés...";
+  submitButton.querySelector("span").textContent =
+    translations[currentLang].contact.form.sending;
   submitButton.disabled = true;
 
   try {
@@ -241,23 +459,21 @@ contactForm.addEventListener("submit", async (e) => {
     formMessage.style.display = "block";
     if (result.success) {
       formMessage.style.color = "var(--primary-color)";
-      formMessage.textContent =
-        "Köszönöm az üzeneted! Hamarosan válaszolok. 🚀";
+      formMessage.textContent = translations[currentLang].contact.form.success;
       // Reset form on success
       contactForm.reset();
     } else {
       formMessage.style.color = "var(--accent-color)";
-      formMessage.textContent =
-        "Hiba történt. Kérlek próbáld újra vagy írj közvetlenül a vargimatix@gmail.com címre!";
+      formMessage.textContent = translations[currentLang].contact.form.error;
     }
   } catch (error) {
     formMessage.style.display = "block";
     formMessage.style.color = "var(--accent-color)";
-    formMessage.textContent =
-      "Hiba történt. Kérlek írj közvetlenül a vargimatix@gmail.com címre!";
+    formMessage.textContent = translations[currentLang].contact.form.error;
   } finally {
     // Re-enable submit button
-    submitButton.querySelector("span").textContent = originalButtonText;
+    submitButton.querySelector("span").textContent =
+      translations[currentLang].contact.form.submit;
     submitButton.disabled = false;
 
     // Hide message after 5 seconds
